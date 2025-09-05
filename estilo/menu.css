@@ -1,0 +1,67 @@
+/* Botão hambúrguer */
+#menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+nav.menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav.menu li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+nav.menu a {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  background-color: #388e3c;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav.menu a:hover {
+  background-color: #2e7d32;
+}
+
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+  #menuToggle {
+    display: block;
+  }
+
+  #menuLinks {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: #2e7d32;
+    border-radius: 0 0 10px 10px;
+  }
+
+  #menuLinks.show {
+    display: flex;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav.menu a {
+    width: 100%;
+    text-align: center;
+  }
+}

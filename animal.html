@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="estilo/style.css" />
     <link rel="stylesheet" href="estilo/footer.css">
+    <link rel="stylesheet" href="estilo/menu.css">
     </head>
     <body>
     <header>
-        <h1>Ficha do Animal</h1>
-        <nav class="menu">
-        <ul>
-            <a href="dashboard.html"><li>Início</li></a>
-            <a href="cadastroAnimal.html"><li>Cadastro de animal</li></a>
-            <a href="dashboard.html#cardsAnimais"><li>Lista de animais</li></a>
-            <a href="relatorios.html"><li>Relatório de saúde animal</li></a>
-            <a href="config.html"><li>Configurações</li></a>
-        </ul>
-    </nav>
-    </header>
+  <h1>Monitoramento de saúde animal <h1 id="tituloFazenda"></h1></h1>
+
+  <nav class="menu">
+    <!-- Botão hambúrguer para dispositivos móveis -->
+    <button id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+
+    <!-- Lista de links -->
+    <ul id="menuLinks">
+      <li><a href="dashboard.html">Início</a></li>
+      <li><a href="cadastroAnimal.html">Cadastro de animal</a></li>
+      <li><a href="dashboard.html#cardsAnimais">Lista de animais</a></li>
+      <li><a href="relatorios.html">Relatório de saúde animal</a></li>
+      <li><a href="config.html">Configurações</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h2>Ficha dos animais</h2>
 
     <main class="ficha-container">
         <section id="dadosAnimal">
@@ -36,7 +44,7 @@
         </div>
     </footer>
 
-
+    <script src="scripts/menu.js"></script>
     <script src="scripts/animal.js"></script>
     </body>
 
