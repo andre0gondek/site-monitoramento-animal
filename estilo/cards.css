@@ -1,0 +1,65 @@
+/* container dos cards */
+#cardsAnimais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* card individual */
+.cardAnimal {
+  background-color: #ffffff;
+  border-left: 6px solid #2e7d32;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 280px;
+  transition: transform 0.2s ease;
+}
+
+.cardAnimal:hover {
+  transform: scale(1.02);
+}
+
+/* título do card */
+.cardAnimal h3 {
+  margin-bottom: 10px;
+  color: #2e7d32;
+  font-size: 18px;
+}
+
+/* informações do animal */
+.cardAnimal p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* status de saúde com cor dinamica */
+.status-saude {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status-saude.saudavel {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.status-saude.analise {
+  background-color: #fff9c4;
+  color: #fbc02d;
+}
+
+.status-saude.doente {
+  background-color: #ffcdd2;
+  color: #d32f2f;
+}
+
+.status-saude.tratamento {
+  background-color: #bbdefb;
+  color: #1976d2;
+}

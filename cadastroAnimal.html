@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/footer.css">
+    <title>Cadastro Animais</title>
+</head>
+<body>
+    <header>
+    <h1>Monitoramento de animais - Sítio Bela Vista</h1>
+
+    <nav class="menu">
+        <ul>
+            <a href="dashboard.html"><li>Início</li></a>
+            <a href="cadastroAnimal.html"><li>Cadastro de animal</li></a>
+            <a href="dashboard.html#cardsAnimais"><li>Lista de animais</li></a>
+            <a href="relatorios.html"><li>Relatório de saúde animal</li></a>
+            <a href="config.html"><li>Configurações</li></a>
+        </ul>
+    </nav>
+    </header>
+
+
+    <h2>Cadastro e gerenciamento de animais</h2>
+
+    <!-- Botões principais -->
+<div class="btn-group">
+  <button type="button" onclick="mostrarFormularioCadastro()">Cadastrar Animal</button>
+  <button type="button" onclick="mostrarFormularioAtualizar()">Atualizar Dados</button>
+  <button type="button" onclick="mostrarFormularioSaude()">Atualizar Saúde</button>
+  <button type="button" onclick="mostrarFormularioExcluir()">Excluir Animal</button>
+</div>
+
+<!-- Formulário de Cadastro -->
+<form class="formCadastro" style="display: none;">
+  <h3>Cadastro de Animal</h3>
+  <label>Nome:</label><input type="text" id="nome"><br>
+  <label>Raça:</label><input type="text" id="raca"><br>
+  <label>Idade:</label><input type="number" id="idade"><br>
+  <label>Peso:</label><input type="number" id="peso"><br>
+  <label>Saúde:</label>
+  <select id="saude">
+    <option value="Em análise">Em análise</option>
+    <option value="Saudável">Saudável</option>
+    <option value="Doente">Doente</option>
+    <option value="Em tratamento">Em tratamento</option>
+  </select><br>
+  <button type="button" onclick="cadastrarAnimal()">Cadastrar</button>
+</form>
+
+<!-- Formulário de Atualização -->
+<form class="formAtualizar" style="display: none;">
+  <h3>Atualizar Dados do Animal</h3>
+  <label>RFID:</label><input type="text" id="rfidAtualizar"><br>
+  <label>Nome:</label><input type="text" id="nomeAtualizar"><br>
+  <label>Raça:</label><input type="text" id="racaAtualizar"><br>
+  <label>Idade:</label><input type="number" id="idadeAtualizar"><br>
+  <label>Peso:</label><input type="number" id="pesoAtualizar"><br>
+  <label>Saúde:</label>
+  <select id="saudeAtualizar">
+    <option value="Em análise">Em análise</option>
+    <option value="Saudável">Saudável</option>
+    <option value="Doente">Doente</option>
+    <option value="Em tratamento">Em tratamento</option>
+  </select><br>
+  <button type="button" onclick="atualizarAnimal()">Atualizar</button>
+</form>
+
+<!-- Formulário de Atualização de Saúde -->
+<form class="formSaude" style="display: none;">
+  <h3>Atualizar Saúde do Animal</h3>
+  <label>RFID:</label><input type="text" id="rfidSaude"><br>
+  <label>Saúde:</label>
+  <select id="novoSaude">
+    <option value="Em análise">Em análise</option>
+    <option value="Saudável">Saudável</option>
+    <option value="Doente">Doente</option>
+    <option value="Em tratamento">Em tratamento</option>
+  </select><br>
+  <button type="button" onclick="atualizarSaude()">Atualizar Saúde</button>
+</form>
+
+<!-- Formulário de Exclusão -->
+<form class="formExcluir" style="display: none;">
+  <h3>Excluir Animal</h3>
+  <label>RFID:</label><input type="text" id="rfidExcluir"><br>
+  <button type="button" onclick="excluirAnimal()">Excluir</button>
+</form>
+
+<footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 - Sistema de Gestão Rural</p>
+            <p>Desenvolvido por André • <a href="mailto:contato@fazendarural.com">contato@fazendarural.com</a></p>
+            <p><i class="fas fa-leaf"></i> Versão 1.0 • <span id="dataAtual"></span></p>
+        </div>
+    </footer>
+
+<script src="scripts/cadastro.js"></script>
+</body>
+</html>

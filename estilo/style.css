@@ -1,0 +1,393 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #2c3e50;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(90deg, #2e7d32, #43a047);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Menu de navegação */
+/* Menu de navegação refinado */
+nav.menu {
+  background-color: #2e7d32;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+nav.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+nav.menu a {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+nav.menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav.menu a:hover {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  transform: translateY(-2px);
+}
+
+nav.menu a:hover::after {
+  width: 60%;
+}
+
+
+/* Títulos */
+h2 {
+  margin-top: 25px;
+  font-size: 24px;
+  color: #2e7d32;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #555;
+}
+
+/* Indicadores */
+.indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.cards {
+  background-color: #ffffff;
+  border-left: 6px solid #2e7d32;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Botões principais */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.btn-group button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, box-shadow 0.2s;
+}
+
+.btn-group button:hover {
+  background-color: #1b5e20;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Formulários */
+form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  max-width: 650px;
+}
+
+form h3 {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+form button:hover {
+  background-color: #2e7d32;
+}
+
+/* Relatórios */
+#relatorios {
+  margin-top: 30px;
+}
+
+button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #1b5e20;
+}
+
+/* Ficha do animal */
+#dadosAnimal {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin-top: 30px;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .indicators {
+    flex-direction: column;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#graficoSaude {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin-top: 40px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#graficoSaude h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2e7d32;
+}
+
+/* Ficha de destaques */
+.ficha-destaques {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.temperatura-box,
+.status-box {
+  background-color: #e8f5e9;
+  border-left: 6px solid #2e7d32;
+  padding: 20px 25px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 26px;
+  color: #2e7d32;
+}
+
+.temperatura-box p,
+.status-box p {
+  font-size: 17px;
+  margin: 0;
+  color: #333;
+}
+
+/* Alerta de temperatura */
+.temp-alerta {
+  animation: piscar 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes piscar {
+  0% { color: red; }
+  50% { color: orange; }
+  100% { color: red; }
+}
+
+.config-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input, select {
+  padding: 5px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.danger-zone {
+  background-color: #fff0f0;
+  border: 1px solid #ff4d4d;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#excluirBtn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#excluirBtn:hover {
+  background-color: #cc0000;
+}
+
+.info-geral {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo strong {
+  display: inline-block;
+  width: 160px;
+  color: #2e7d32;
+}
+
+.campo span {
+  font-weight: 500;
+  color: #333;
+}
+
+.campo input {
+  padding: 8px;
+  width: calc(100% - 170px);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#editarBtn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#editarBtn:hover {
+  background-color: #1b5e20;
+}

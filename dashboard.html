@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="">
+    <script src="https://kit.fontawesome.com/b690a6b06f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/cards.css">
+    <link rel="stylesheet" href="estilo/footer.css">
+    <title>Monitoramento de animais</title>
+
+</head>
+<body>
+    <header>
+    <h1>Monitoramento de saúde animal <h1 id="tituloFazenda"></h1></h1>
+
+    <nav class="menu">
+        <ul>
+            <a href="dashboard.html"><li>Início</li></a>
+            <a href="cadastroAnimal.html"><li>Cadastro de animal</li></a>
+            <a href="#cardsAnimais"><li>Lista de animais</li></a>
+            <a href="relatorios.html"><li>Relatório de saúde animal</li></a>
+            <a href="config.html"><li>Configurações</li></a>
+            
+        </ul>
+    </nav>
+    </header>
+
+    <h2>Monitoramento em Tempo Real do Rebanho</h2>
+    <h3>Acompanhe a saúde, temperatura e status de cada animal de forma simples</h3>
+
+    <section class="indicators">
+    <div class="cards" id="total">Total de animais cadastrados: 0</div>
+    <div class="cards" id="saudaveis">Animais Saudáveis: 0</div> 
+    <div class="cards" id="analise">Animais em análise: 0</div> 
+    <div class="cards" id="doentes">Animais Doentes: 0</div>
+    </section>
+    
+    <section id="cardsAnimais">
+        <h2>Animais no sistema: </h2>
+
+    </section>
+
+    <section id="graficoSaude">
+        <h2>Evolução da Saúde do Rebanho</h2>
+        <canvas id="graficoLinha" width="400" height="200"></canvas>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 - Sistema de Gestão Rural</p>
+            <p>Desenvolvido por André • <a href="mailto:contato@fazendarural.com">contato@fazendarural.com</a></p>
+            <p><i class="fas fa-leaf"></i> Versão 1.0 • <span id="dataAtual"></span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

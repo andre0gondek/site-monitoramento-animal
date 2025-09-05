@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Cadastro da Fazenda</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #2c3e50;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #2e7d32;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #1b5e20;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo ao Gerenciador Rural</h1>
+    <p>Vamos começar cadastrando o nome da sua fazenda</p>
+  </header>
+
+  <main>
+    <form id="formFazenda">
+      <label for="nomeFazenda">Nome da Fazenda:</label>
+      <input type="text" id="nomeFazenda" required placeholder="Ex: Fazenda Boa Esperança" />
+      <button type="submit">Continuar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Sistema de Gestão Rural</p>
+  </footer>
+
+  <script src="scripts/scriptindex.js"></script>
+</body>
+</html>
